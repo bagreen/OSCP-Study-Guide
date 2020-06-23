@@ -22,4 +22,13 @@
 `sudo mount -t cifs -o 'username=(username).password=(password)' //(IP) /(mountpoint)`
 
 ## Find a user's accessible shares
-`smbmap -U (username) -p (password) -H (IP)`
+`smbmap -U (username) -p (password) -H (IP) -R`
+
+## Find a list of user's accessible shares
+`smbmap -u (user list) -p (password)`
+
+## Check user's remoting privileges
+`crackmapexec winrm (IP) -U (username) -p (password)`
+
+## Access shell 
+`evil-winrm -u (username) -p (password) -i (IP)`
