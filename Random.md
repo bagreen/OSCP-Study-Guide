@@ -3,7 +3,10 @@
 ## Standard nmap scan
 `sudo nmap -sC -sV -oA nmap/(box name) (IP)`
 
-## Make nice screenshots of access
+## Screenshots
+### Howto
+In Kali, `CTRL+SHIFT+PRINT SCREEN` brings up a target window, you can then use this to draw a rectangle around an area and take a picture. This picture is saved to your clipboard, which you can paste inside or outside of your VM
+### Screenshot access when obtained
 Windows: `hostname; whoami; ipconfig`
 
 Linux: `hostname; whoami; ip a`
@@ -76,14 +79,18 @@ Windows has a default of a 128 TTL, Unix has 64?
 ## Finding web server subdirectories
 `gobuster dir -u '(IP)' -x (format) -w /usr/share/wordlists/dirbuster/(chosen wordlist) -o (output file)`
 
-## Reverse Shells
+## Reverse shells
 ### Where can they be found?
-Find most in `/opt/nishang/Shells/` on Kali
+On Kali, find most in `/opt/nishang/Shells/`, `/usr/share/laudanum/php/`
 
-Plenty at [pentestmonkey](http://pentestmonkey.net/)
+Plenty at [pentestmonkey](http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet). Netcat is fairly reliable, bash also works well
+### Setup a listener for a reverse shell
+`nc -lvnp 8081`
+
+### Convert into a real shell
+`python -c 'import pty;pty.spawn("/bin/bash")'`
+
 
 ## Searchsploit
 Path for Kali is `/usr/share/exploitdb/exploits/`
 
-## Screenshots
-In Kali, CTRL+SHIFT+PRINT SCREEN brings up a target window, you can then use this to draw a rectangle around an area and take a picture. This picture is saved to your clipboard, which you can paste inside or outside of your VM
