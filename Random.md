@@ -75,3 +75,7 @@ Windows has a default of a 128 TTL, Unix has 64?
 
 ## Finding web server subdirectories
 `gobuster dir -u '(IP)' -x (format) -w /usr/share/wordlists/dirbuster/(chosen wordlist) -o (output file)`
+
+## Reverse Shells
+### Where can they be found?
+Find most in `/opt/nishang/Shells/` on Kali
