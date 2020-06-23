@@ -79,3 +79,6 @@ Windows has a default of a 128 TTL, Unix has 64?
 ## Reverse Shells
 ### Where can they be found?
 Find most in `/opt/nishang/Shells/` on Kali
+
+## Searchsploit
+Path for Kali is `/usr/share/exploitdb/exploits/`
