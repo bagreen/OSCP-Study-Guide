@@ -80,5 +80,10 @@ Windows has a default of a 128 TTL, Unix has 64?
 ### Where can they be found?
 Find most in `/opt/nishang/Shells/` on Kali
 
+Plenty at [pentestmonkey](http://pentestmonkey.net/)
+
 ## Searchsploit
 Path for Kali is `/usr/share/exploitdb/exploits/`
+
+## Screenshots
+In Kali, CTRL+SHIFT+PRINT SCREEN brings up a target window, you can then use this to draw a rectangle around an area and take a picture. This picture is saved to your clipboard, which you can paste inside or outside of your VM
