@@ -100,3 +100,6 @@ Uploads a file from your current working directory
 
 ## DNS Servers
 Typically running kerberos (:88), Windows RPC (:135), and ldap (:389), possibilty SMB (:445)
+
+## tmux
+When a bash command finishes running in a pane in tmux, it'll change the name from something like “nmap” to “bash”
