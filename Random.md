@@ -46,24 +46,6 @@ In Metasploit:
 ## Check sessions in Metasploit
 `sessions -i 1`
 
-## RPC 
-### Access
-`rpcclient -U '' (IP)`
-### `enumdomusers`
-Lists all users
-### `queryuser 0x(user number)`
-Lists info about user
-### `enumdomgroups`
-Lists all groups
-### `querygroup 0x(group number)`
-Lists info about group
-### `querygroupmem 0x(group number)`
-Lists group members
-### More details
-In RPC client, run `querdispinfo`
-
-
-
 ## Wordlists
 ### How to make nice wordlists
 `hashcat --force --stdout -r /usr/share/hashcat/rules/best64.rule (original password list you have) > password.lst`
