@@ -2,6 +2,10 @@
 ## Linux
 ### LinEnum.sh
 For checking general info
+
+### Processes
+`ps aux` 
+
 ## Windows
 ### Seatbelt.exe
 For checking general info
