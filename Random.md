@@ -80,6 +80,8 @@ Windows has a default of a 128 TTL, Unix has 64?
 ## Finding web server subdirectories
 `gobuster dir -u '(IP)' -x (format) -w /usr/share/wordlists/dirbuster/(chosen wordlist) -o (output file)`
 
+Sometimes you may want to use /usr/share/wordlists/seclists/ instead
+
 ## Reverse shells
 ### Where can they be found?
 On Kali, find most in `/opt/nishang/Shells/`, `/usr/share/laudanum/php/`
@@ -98,8 +100,19 @@ Path for Kali is `/usr/share/exploitdb/exploits/`
 ### `upload`
 Uploads a file from your current working directory
 
-## DNS Servers
+## DNS servers
 Typically running kerberos (:88), Windows RPC (:135), and ldap (:389), possibilty SMB (:445)
 
 ## tmux
 When a bash command finishes running in a pane in tmux, it'll change the name from something like “nmap” to “bash”
+
+## Java files
+Unzip .jar to get the extra hidden files
+
+Uncompress Java files with `jd-gui`
+
+## Wordpress
+Use `wpscan`
+
+## Enumeration
+`wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh`
